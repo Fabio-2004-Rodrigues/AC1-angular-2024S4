@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <h2>Calculadora</h2>
+    <form>
+        <div class="mb-3">
+            <label for="num1" class="form-label">Número 1</label>
+            <input type="number" class="form-control" [(ngModel)]="num1" name="num1" id="num1"
+                placeholder="Insira o primeiro número">
+        </div>
+        <div class="mb-3">
+            <label for="num2" class="form-label">Número 2</label>
+            <input type="number" class="form-control" [(ngModel)]="num2" name="num2" id="num2"
+                placeholder="Insira o segundo número">
+        </div>
+        <div class="mb-3">
+            <label for="operacao" class="form-label">Operação</label>
+            <select class="form-select" [(ngModel)]="operacao" name="operacao" id="operacao">
+                <option value="soma">Soma</option>
+                <option value="subtracao">Subtração</option>
+                <option value="multiplicacao">Multiplicação</option>
+                <option value="divisao">Divisão</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="resultado" class="form-label">Resultado</label>
+            <input type="text" class="form-control" [(ngModel)]="resultado" name="resultado" id="resultado" readonly>
+        </div>
+        <button type="button" class="btn btn-primary" (click)="calcular()">Calcular</button>
+    </form>
+</div>

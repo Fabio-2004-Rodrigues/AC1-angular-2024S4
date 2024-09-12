@@ -1,0 +1,12 @@
+<div class="container mt-5">
+    <h2>Conversor de Temperatura</h2>
+    <form>
+        <div class="mb-3">
+            <label for="celsius" class="form-label">Temperatura em Celsius</label>
+            <input type="number" class="form-control" [(ngModel)]="celsius" name="celsius" id="celsius"
+                placeholder="Insira a temperatura em Celsius">
+        </div>
+        <button type="button" class="btn btn-primary" (click)="converterParaFahrenheit()">Converter</button>
+        <p>Fahrenheit: {{ fahrenheit }}</p>
+    </form>
+</div>
