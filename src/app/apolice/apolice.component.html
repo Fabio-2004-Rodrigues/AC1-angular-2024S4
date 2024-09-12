@@ -1,17 +1,27 @@
 <div class="container mt-5">
     <h2>Apólice de Seguro</h2>
     <form>
-        <div class="mb-3">
-            <label for="nome" class="form-label">Nome do Segurado</label>
-            <input type="text" class="form-control" [(ngModel)]="nome" name="nome" id="nome"
-                placeholder="Insira o nome do segurado">
-        </div>
-        <div class="mb-3">
-            <label for="numeroApolice" class="form-label">Número da Apólice</label>
-            <input type="text" class="form-control" [(ngModel)]="numeroApolice" name="numeroApolice" id="numeroApolice"
-                placeholder="Insira o número da apólice">
-        </div>
-        <button type="button" class="btn btn-primary" (click)="consultarApolice()">Consultar Apólice</button>
-        <p>{{ resultado }}</p>
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome do Segurado</label>
+        <input type="text" class="form-control" [(ngModel)]="nome" name="nome" id="nome" placeholder="Nome do segurado">
+      </div>
+      <div class="mb-3">
+        <label for="sexo" class="form-label">Sexo</label>
+        <select class="form-select" [(ngModel)]="sexo" name="sexo" id="sexo">
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="idade" class="form-label">Idade</label>
+        <input type="number" class="form-control" [(ngModel)]="idade" name="idade" id="idade" placeholder="Idade">
+      </div>
+      <div class="mb-3">
+        <label for="valorAutomovel" class="form-label">Valor do Automóvel</label>
+        <input type="number" class="form-control" [(ngModel)]="valorAutomovel" name="valorAutomovel" id="valorAutomovel" placeholder="Valor do automóvel">
+      </div>
+      <button type="button" class="btn btn-primary" (click)="calcularApolice()">Calcular Apólice</button>
+      <p>Valor da Apólice: R$ {{ valorApolice | number: '1.2-2' }}</p>
     </form>
-</div>
+  </div>
+  

@@ -6,7 +6,8 @@
             <input type="number" class="form-control" [(ngModel)]="celsius" name="celsius" id="celsius"
                 placeholder="Insira a temperatura em Celsius">
         </div>
-        <button type="button" class="btn btn-primary" (click)="converterParaFahrenheit()">Converter</button>
-        <p>Fahrenheit: {{ fahrenheit }}</p>
+        <button type="button" class="btn btn-primary" (click)="converterTemperaturas()">Converter</button>
     </form>
+    <p>Fahrenheit: {{ fahrenheit }}</p>
+    <p>Kelvin: {{ kelvin }}</p>
 </div>

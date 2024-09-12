@@ -7,10 +7,18 @@ import { Component } from '@angular/core';
 })
 export class ApoliceComponent {
   nome: string = '';
-  numeroApolice: string = '';
-  resultado: string = '';
+  sexo: string = 'masculino';
+  idade: number = 0;
+  valorAutomovel: number = 0;
+  valorApolice: number = 0;
 
-  consultarApolice() {
-    this.resultado = `Apólice de ${this.nome} com o número ${this.numeroApolice} foi consultada.`;
+  calcularApolice() {
+    if (this.sexo === 'masculino' && this.idade <= 25) {
+      this.valorApolice = this.valorAutomovel * 0.15;
+    } else if (this.sexo === 'masculino' && this.idade > 25) {
+      this.valorApolice = this.valorAutomovel * 0.10;
+    } else if (this.sexo === 'feminino') {
+      this.valorApolice = this.valorAutomovel * 0.08;
+    }
   }
 }

@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
 export class ConversorTemperaturaComponent {
   celsius: number = 0;
   fahrenheit: number = 0;
+  kelvin: number = 0;
 
-  converterParaFahrenheit() {
+  converterTemperaturas() {
     this.fahrenheit = (this.celsius * 9/5) + 32;
+    this.kelvin = this.celsius + 273.15;
   }
 }
